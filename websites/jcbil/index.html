@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+	<head>
+		<title>J&amp;C Institute for Learning</title>
+		<meta charset="UTF-8">
+		<meta content="J&C Brown Institute for Learning, CodeStream Studios, TeamCodeFlow" name="keywords">
+		<meta content="To educate all students toward success through professional growth opportunities for educators, with special focus devoted toward males of color." name="description">
+		<meta content="CodeStream Studios, TeamCodeFlow" name="author">
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link href="resources/icon.png" rel="icon" type="image/png"><!-- normalize -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet" type="text/css"><!-- jquery -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+		</script><!-- bootstrap -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+		</script><!-- styles/scripts -->
+		<link href="global.css" rel="stylesheet" type="text/css">
+		<link href="home.css" rel="stylesheet" type="text/css">
+		<script src="home.js" type="text/javascript">
+		</script><!-- lightbox -->
+		<link href="resources/lightbox/dist/css/lightbox.css" rel="stylesheet">
+		<script src="resources/lightbox/dist/js/lightbox-plus-jquery.js">
+		</script>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<script type="text/javascript">
+	      console.log("Window width: " + $(window).width() + "px");
+	      $(document).ready(function(){
+	          if ( $(window).width() > 768 ) {
+	              $('#search').css("width","75px");
+	              $('#search').focus(function(){
+	                  $('.d-t-a').hide();
+	                  $('.in-c').removeClass("glyphicon glyphicon-search");
+	                  $('.in-c').addClass("glyphicon glyphicon-remove");
+	                  $(this).animate({width: "200px"}, 250);
+	              });
+	              $('#search').blur(function(){
+	                  $(this).animate({width: "75px"}, 250, function() {
+	                      $('.d-t-a').show();
+	                      $('.in-c').removeClass("glyphicon glyphicon-remove");
+	                      $('.in-c').addClass("glyphicon glyphicon-search");
+	                  });
+	              });
+	              if ( $('.navbar-collapse').hasClass("in") ) {
+	                  $('.navbar-collapse').removeClass("in");
+	                  $('.navbar-collapse').addClass("collapse");
+	              }
+	              else {}
+	          }
+	          else if ( $(window).width() > 1040 ) {
+	              $('#search').css("width","125px");
+	              $('#search').focus(function(){
+	                  $('.d-t-a').hide();
+	                  $('.in-c').removeClass("glyphicon glyphicon-search");
+	                  $('.in-c').addClass("glyphicon glyphicon-remove");
+	                  $(this).animate({width: "200px"}, 250);
+	              });
+	              $('#search').blur(function(){
+	                  $(this).animate({width: "125px"}, 250, function() {
+	                      $('.d-t-a').show();
+	                      $('.in-c').removeClass("glyphicon glyphicon-remove");
+	                      $('.in-c').addClass("glyphicon glyphicon-search");
+	                  });
+	              });
+	              if ( $('.navbar-collapse').hasClass("in") ) {
+	                  $('.navbar-collapse').removeClass("in");
+	                  $('.navbar-collapse').addClass("collapse");
+	              }
+	              else {
+	              }
+	          }
+	          else {
+	              $('#search').animate({width: "100%"}, 0);
+	          }
+	      });
+			</script>
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-target="#responsive" data-toggle="collapse" type="button"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="https://www.jcbil.com" title="Targeted and Strategic Thinking Solutions"><img alt="J&C Brown Institute for Learning" id="logo" src="resources/logo.png"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="responsive">
+					<ul class="nav navbar-nav">
+						<li class="active" title="Home">
+							<a href="http://jcbil.com">Home</a>
+						</li>
+						<li title="Contact">
+							<a href="contact">Contact</a>
+						</li>
+						<li title="Services">
+							<a href="services">Services</a>
+						</li>
+						<li class="dropdown" title="Professional Developer Library">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="/prodevlibrary">Library<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="library/archives">Archives</a>
+								</li>
+								<li>
+									<a href="library/seminars">Seminars</a>
+								</li>
+								<li>
+									<a href="library/testimonials">Testimonials</a>
+								</li>
+								<li>
+									<a href="seminars/blog-2">Professional Development</a>
+								</li>
+							</ul>
+						</li>
+						<li title="Gallery">
+							<a href="gallery">Gallery</a>
+						</li>
+						<li class="visible-xs" title="Desire to Aspire">
+							<a href="http://www.desire-to-aspire.com">Desire to Aspire</a>
+						</li>
+						<li class="hidden-xs hidden-sm nav-img d-t-a" title="Desire to Aspire">
+							<a href="http://www.desire-to-aspire.com"><img src="resources/desire-to-aspire.png"></a>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-right">
+						<div class="input-group">
+							<input autocomplete="no" class="form-control" id="search" maxlength="256" name="s" placeholder="Search" type="text">
+							<div class="input-group-btn">
+								<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class="carousel slide" data-ride="carousel" id="slideshow">
+			<ol class="carousel-indicators">
+				<li class="active" data-slide-to="0" data-target="#slideshow"></li>
+				<li data-slide-to="1" data-target="#slideshow"></li>
+				<li data-slide-to="2" data-target="#slideshow"></li>
+				<li data-slide-to="3" data-target="#slideshow"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+					<a data-lightbox="image-1" href="resources/image-01.jpg">
+					<div id="carousel-hitbox"></div></a>
+				</div>
+				<div class="item">
+					<a data-lightbox="image-1" href="resources/image-05.jpg">
+					<div id="carousel-hitbox"></div></a>
+				</div>
+				<div class="item">
+					<a data-lightbox="image-1" href="resources/image-06.jpg">
+					<div id="carousel-hitbox"></div></a>
+				</div>
+				<div class="item">
+					<a data-lightbox="image-1" href="resources/image-07.jpg">
+					<div id="carousel-hitbox"></div></a>
+				</div>
+			</div><a class="left carousel-control" data-slide="prev" href="#slideshow"><span class="glyphicon glyphicon-chevron-left"></span> <span class="sr-only">Previous</span></a> <a class="right carousel-control" data-slide="next" href="#slideshow"><span class="glyphicon glyphicon-chevron-right"></span> <span class="sr-only">Next</span></a>
+		</div>
+		<div class="container col-xs-12" id="about">
+			<br>
+			<h2 class="col-xs-offset-1 col-xs-10 col-md-offset-4 col-md-4">About JCBIL</h2>
+			<h5 class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">Welcome to our company.</h5><br>
+			<br>
+			<div class="container col-xs-12 col-sm-offset-1 col-sm-10">
+				<p><b>JCB Institute For Learning (JCBIL)</b> specializes in offering leading edge services designed to help you to improve your leadership and support skills needed to increase student learning. JCB Institute offers dynamic learning strategies that will better enable you to meet the needs of all children. We provide techniques that will lead to improvement of your performance and, thereby, the improvement in learning, growth and development in our students. We offer services in the following areas:</p><br>
+				<ul>
+					<li>Educational Leadership &amp; Development Consultant Services</li>
+					<li>Support for School Boards</li>
+					<li>Support for Superintendents</li>
+					<li>Support for Administrators</li>
+					<li>Support for Teachers</li>
+					<li>Government Lobbying</li>
+					<li>Targeted &amp; Strategic Thinking Solutions (Schools/Districts)</li>
+					<li>Support for School Boards</li>
+					<li>Personnel and Recruitment</li>
+					<li>Child &amp; Family Mentoring &amp; Counseling</li>
+				</ul><br>
+				<br>
+				<p>The <b>JCB Institute For Learning Company</b> was formed to provide services to schools and school districts in support of student learning, with particular emphasis on putting conditions in place for all children to be successful in learning -“all means all”! We are well prepared and committed to provide targeted assistance for assuring that:</p><br>
+				<ul>
+					<li>standards and expectations are high for students and employees</li>
+					<li>an action plan is in place for student learning success</li>
+					<li>the schools/districts are organized for results</li>
+					<li>the focus is always on children first</li>
+					<li>goals, objectives, and indicators of success are established</li>
+					<li>resources are aligned with the education plan to best support teaching and learning</li>
+					<li>each classroom has a highly qualified and certified teacher</li>
+					<li>a growth, development, evaluation and accountability plan is in place for all instructional personnel</li>
+					<li>the environment is proper for teaching and learning</li>
+					<li>diversity is celebrated and all students and personnel are treated with respect and appreciation</li>
+					<li>decision making is data based and supported by current research</li>
+					<li>leadership is focused on what matters the most: student success and well being</li>
+				</ul><br>
+				<br>
+			</div>
+		</div><br>
+		<br>
+		<div class="jumbotron col-xs-12" id="team">
+			<h1 class="col-xs-offset-1 col-xs-10 col-sm-offset-4 col-sm-4">Our Team</h1><br>
+			<p class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">The Browns welcome you to the web site and, as importantly, hope that you will enjoy the benefits of services offered for professional development; government lobbying; personal and family mentoring and counseling support; personnel recruitment; targeted and strategic thinking solutions for schools and school districts.</p><br>
+			<p class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">As long-time educators and community leaders, the Browns recognize that more will be accomplished in our society through the sharing of knowledge and information than we could ever accomplish otherwise. In that vein we welcome your suggestions for opportunities to better serve you.</p>
+		</div><br>
+		<br>
+		<div class="container col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6" id="staff">
+			<div class="staff-container">
+				<div class="staff-member col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-5 col-sm-offset-2 col-sm-2">
+					<a data-lightbox="image-2" data-title="Reesha Johnette Brown&lt;br&gt;&lt;br&gt;Graduate of University" href="resources/pic_ReeshaBrown.png"><img src="resources/pic_ReeshaBrown.png"></a>
+					<h6>Reesha Johnette Brown</h6>
+					<p>Graduate of University of West Georgia</p>
+				</div>
+			</div>
+			<div class="staff-container">
+				<div class="staff-member col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-5 col-md-offset-2 col-md-2">
+					<a data-lightbox="image-2" data-title="Johnny E. Brown&lt;br&gt;&lt;br&gt;Born and raised in Austin,TX" href="resources/pic_JohnnyBrown.png"><img src="resources/pic_JohnnyBrown.png"></a>
+					<h6>Johnny E. Brown</h6>
+					<p>Born and raised in Austin, TX</p>
+				</div>
+			</div>
+			<div class="staff-container">
+				<div class="staff-member col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-5 col-md-offset-2 col-md-2">
+					<a data-lightbox="image-2" data-title="Carolyn J. Brown&lt;br&gt;&lt;br&gt;Born and raised in Paris, TX" href="resources/pic_CarolynBrown.png"><img src="resources/pic_CarolynBrown.png"></a>
+					<h6>Carolyn J. Brown</h6>
+					<p>Born and raised in Paris, TX</p>
+				</div>
+			</div>
+			<div class="staff-container">
+				<div class="staff-member col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-5 col-md-offset-2 col-md-2">
+					<a data-lightbox="image-2" data-title="Berlin L. Brown&lt;br&gt;&lt;br&gt;Graduate of University" href="resources/pic_BerlinBrown.png"><img src="resources/pic_BerlinBrown.png"></a>
+					<h6 class="col-xs-offset-1 col-xs-10">Berlin L. Brown</h6>
+					<p class="col-xs-offset-1 col-xs-10">Graduate of University of Alabama</p>
+				</div>
+			</div>
+			<div class="staff-container col-sm-offset-1 col-sm-10">
+				<div class="staff-member col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-5 col-md-offset-2 col-md-2">
+					<a data-lightbox="image-2" data-title="Mary K. Brown-Ruegg&lt;br&gt;&lt;br&gt;Graduate of Texas" href="resources/pic_MaryBrown.png"><img src="resources/pic_MaryBrown.png"></a>
+					<h6>Mary K. Brown-Ruegg</h6>
+					<p>Graduate of Texas State University</p>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="jumbotron col-xs-12" id="statement">
+			<h1 class="col-xs-offset-1 col-xs-10 col-md-offset-4 col-md-4">Our Mission Statement</h1><br>
+			<p class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8">“To educate all students toward success through professional growth opportunities for educators, with special focus devoted toward males of color.”</p>
+		</div><br>
+		<br>
+		<div class="container col-xs-12 col-sm-offset-1 col-sm-10" id="service">
+			<br>
+			<h2 class="col-xs-offset-1 col-xs-10 col-md-offset-4 col-md-4">Our Services</h2>
+			<h5 class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">At JCBIL, LLC we provide educational consultant support services to enable personnel, students, and the community to become more successful in accomplishing their roles in education.</h5><br>
+			<br>
+			<div class="container col-xs-12" id="service-holder">
+				<div class="service-card">
+					<div class="img-holder"><img class="service-card-icon" src="resources/services-1.png"></div>
+					<div class="service-card-actual">
+						<h3>Other Educational Consulting Services</h3>
+						<p>Other Educational Consulting Solutions</p>
+					</div>
+				</div>
+				<div class="service-card">
+					<div class="img-holder"><img class="service-card-icon" src="resources/services-2.png"></div>
+					<div class="service-card-actual">
+						<h3>Educational Personnel Recruitment</h3>
+						<p>Selection, Assignment, and Retention of Highly Qualified Staff Comprehensive &amp; Continuous Development of Staff</p>
+					</div>
+				</div>
+				<div class="service-card">
+					<div class="img-holder"><img class="service-card-icon" src="resources/services-3.png"></div>
+					<div class="service-card-actual">
+						<h3>Leadership and Development Support</h3>
+						<p>Excellence in Leadership for Desired Results Address Issues of Excellence, Adequacy, &amp; Equity in Education Conversational Spanish support for educators, Roles and responsibilities for…</p>
+					</div>
+				</div>
+				<div class="service-card">
+					<div class="img-holder"><img class="service-card-icon" src="resources/services-4.png"></div>
+					<div class="service-card-actual">
+						<h3>Targeted and Strategic Thinking Solutions</h3>
+						<p>Important aspects of principles, beliefs, &amp; visions associated with school improvement and strategic planning Steps for developing, implementing, and monitoring the strategic plan…</p>
+					</div>
+				</div>
+				<div class="service-card">
+					<div class="img-holder"><img class="service-card-icon" src="resources/services-5.png"></div>
+					<div class="service-card-actual">
+						<h3>Government Lobbying</h3>
+						<p>Government Lobbying Focused on Education</p>
+					</div>
+				</div>
+				<div class="service-card">
+					<div class="img-holder"><img class="service-card-icon" src="resources/services-6.png"></div>
+					<div class="service-card-actual">
+						<h3>Mentoring and Counseling Support</h3>
+						<p>Personal, family, and child growth and development mentoring and counseling support</p>
+					</div>
+				</div>
+			</div>
+		</div><br>
+		<br>
+		<div class="jumbotron col-xs-12" id="quote">
+			<blockquote class="container col-xs-12">
+				<div class="container col-xs-12 col-sm-4 col-md-3"><img src="resources/pic_JohnDoe.png"></div>
+				<div class="container col-xs-12 col-sm-8 col-md-9">
+					<p>“I will apply what I learned to listen more to each student, become more patient with them, and allow them to be more involved in the reading and learning.”</p><br>
+					<p>~ John Doe</p>
+				</div>
+			</blockquote>
+		</div><br>
+		<br>
+		<div class="container col-xs-12" id="clients">
+			<div class="row col-xs-12"><img class="col-xs-4 col-sm-2" src="client_brulex.png"> <img class="col-xs-4 col-sm-2" src="client_consectetur.png"> <img class="col-xs-4 col-sm-2" src="client_eleventhmars.png"> <img class="col-xs-4 col-sm-2" src="client_stantocreativo.png"> <img class="col-xs-4 col-sm-2" src="client_kreokoolkatz.png"> <img class="col-xs-4 col-sm-2" src="client_aliquamsphere.png"> <img class="col-xs-4 col-sm-2" src="client_cleanlaura.png"></div>
+		</div><br>
+		<br>
+		<footer class="footer col-xs-12">
+			<div class="row col-xs-12">
+				<div class="col-xs-12 col-sm-4" id="ci-f">
+					<ul class="col-xs-12" id="ci-f2">
+						<li>
+							<span class="glyphicon glyphicon-home"></span><b>Location:</b> <a href="https://www.google.com/maps/place/Houston,+TX+77229/@29.7844419,-95.2197431,18z">P.O. Box 24160, Houston, TX 77229</a>
+						</li>
+						<li>
+							<span class="glyphicon glyphicon-phone-alt"></span><b>Phone:</b> <a href="tel:14097229742">+1 (409) 722-9742</a>
+						</li>
+						<li>
+							<span class="glyphicon glyphicon-envelope"></span><b>Email:</b> <a href="mailto:info@jcbil.com">info@jcbil.com</a>
+						</li>
+						<li>
+							<span class="glyphicon glyphicon-envelope"></span><b>Email:</b> <a href="mailto:support@jcbil.com">support@jcbil.com</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4" id="ci-f">
+					<ul class="col-xs-12" id="ci-f2">
+						<li><span class="glyphicon glyphicon-user"></span><b>Johnny E. Brown</b>, Chief Executive Officer</li>
+						<li>
+							<span class="glyphicon glyphicon-earphone"></span><b>Phone:</b> <a href="tel:14093228405">+1 (409) 322-8405</a>
+						</li>
+						<li>
+							<span class="glyphicon glyphicon-envelope"></span><b>Email:</b> <a href="mailto:jebrown@jcbil.com">jebrown@jcbil.com</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4" id="ci-f">
+					<ul class="col-xs-12" id="ci-f2">
+						<li><span class="glyphicon glyphicon-user"></span><b>Carolyn J. Brown</b>, Associate Executive Officer</li>
+						<li>
+							<span class="glyphicon glyphicon-earphone"></span><b>Phone:</b> <a href="tel:17702659162">+1 (770) 265-9162</a>
+						</li>
+						<li>
+							<span class="glyphicon glyphicon-envelope"></span><b>Email:</b> <a href="mailto:cjbrown@jcbil.com">cjbrown@jcbil.com</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row col-xs-12">
+				<div class="col-xs-12 col-sm-8">
+					<div class="col-xs-12">
+						<form>
+							<div class="form-group col-xs-12 col-sm-4">
+								<label for="name">Name:</label> <input class="form-control" id="name" type="text">
+							</div>
+							<div class="form-group col-xs-12 col-sm-4">
+								<label for="email">Email:</label> <input class="form-control" id="email" type="email">
+							</div>
+							<div class="form-group col-xs-12 col-sm-4">
+								<label for="phone">Phone:</label> <input class="form-control" id="phone" type="number">
+							</div>
+							<div class="form-group col-xs-12 col-sm-12">
+								<label for="comment">Message:</label> 
+								<textarea class="form-control" id="comment" rows="5"></textarea>
+							</div>
+							<div class="form-group col-xs-12">
+								<button class="btn btn-default pull-right" type="submit">Send</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="container col-xs-12 col-sm-4" id="lower-navigation">
+					<div class="col-xs-12">
+						<h4>Quick Links</h4>
+					</div>
+					<div class="container col-xs-6">
+						<ul>
+							<li>
+								<a href="http://jcbil.com">Home</a>
+							</li>
+							<li>
+								<a href="contact">Contact</a>
+							</li>
+							<li>
+								<a href="services">Services</a>
+							</li>
+							<li>
+								<a href="gallery">Gallery</a>
+							</li>
+							<li>
+								<a href="sitemap">Site Map</a>
+							</li>
+							<li>
+								<a href="privacy-policy">Privacy Policy</a>
+							</li>
+						</ul>
+					</div>
+					<div class="container col-xs-6">
+						<ul>
+							<li>
+								<a href="library">Library</a>
+							</li>
+							<li>
+								<a href="library/seminars">Seminars</a>
+							</li>
+							<li>
+								<a href="library/testimonials">Testimonials</a>
+							</li>
+							<li>
+								<a href="library/archives">Archives</a>
+							</li>
+							<li>&nbsp;</li>
+							<li>
+								<a href="http://www.desire-to-aspire.com">Desire to Aspire</a>
+							</li>
+						</ul>
+					</div>
+					<div id="social" class="col-xs-12">
+						<a href=""><img class="social-icon" src="https://cdn3.iconfinder.com/data/icons/social-network-icon/112/facebook-256.png" /></a>
+						<a href=""><img class="social-icon" src="https://cdn1.iconfinder.com/data/icons/social-media-icon-1/112/twitter-256.png" /></a>
+						<a href=""><img class="social-icon" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-google-plus-256.png" /></a>
+						<a href=""><img class="social-icon" src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/pinterest-256.png" /></a>
+						<a href=""><img class="social-icon" src="https://cdn0.iconfinder.com/data/icons/social-media-color-1/128/yumminky-social-media-63-256.png" /></a>
+					</div>
+				</div>
+			</div>
+			<div class="container copyright col-xs-12">
+				J&amp;C Institute for Learning Targeted and Strategic Thinking Solutions &copy; 2017 All rights reserved. <a href="https://teamcodeflow.com">TeamCodeFlow</a> design. <a href="https://codestreamstudios.com">CodeStream Studios</a> design.
+			</div><br>
+		</footer>
+	</body>
+</html>
