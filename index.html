@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title>TeamCodeFlow coming soon...</title>
-  <link rel="icon" type="image/png">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-  </script> 
-  <script src = "index.js">
-  $( document ).ready(function() {
-    var songs = ['allstar.mp3', 'emospidey.mp3', 'gearsofwar.mp3','numberone.mp3','sadsong.mp3','sandstorm.mp3','spidey2.mp3'];
-    var rand = songs[Math.floor(Math.random() * songs.length)];
-    $('#audioPlayer').attr('src', rand);
-});
-</script>
-  <script>
+<html lang="en-US">
+  <head>
+    <title>Project Manager</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="teamcodeflow, gamernes9, miclaymon">
+    <meta name="description" content="Project management dashboard 2.0">
+    <meta name="author" content="Nathaniel Smith, Michael Laymon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="http://www.teamcodeflow.com/TCF_bw-cr_256.png" type="image/png">
+    <!-- Normalize -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Files -->
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -22,16 +26,218 @@
 
   ga('create', 'UA-104664904-1', 'auto');
   ga('send', 'pageview');
+
 </script>
-</head>
-<body>
-  <audio id = "audioPlayer" autoplay = ''></audio>
-  <style>
-     html, body {
-       margin: 0;
-       background: black;
-       overflow: hidden;
-     }  
-  </style>
-</body>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="responsive">
+          <ul class="nav navbar-nav">
+            <li title="back to teamcodeflow.com"><a href="http://teamcodeflow.com"><span class="glyphicon glyphicon-arrow-left"></span></a></li>
+            <li title="jcbil.com" class="dropdown view-JCBIL hidden-md">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="visible-xs">J&amp;C Brown Institute for Learning <span class="caret"></span></span>
+                <span class="visible-sm">JCBIL <span class="caret"></span></span>
+                <span class="visible-md">JCBIL <span class="caret"></span></span>
+                <span class="visible-lg">JCBIL <span class="caret"></span></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a title="http://www.jcbil.com/" href="http://www.jcbil.com"><i>Home</i></a></li>
+                <li><a title="http://www.jcbil.com/" href="/jcbil.com">Home</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="navbar-form navbar-right hidden-xs">
+            <div class="input-group">
+              <input type="text" id="searchprojects" list="auto-options" name="search" class="form-control" autocomplete="no" placeholder="Search">
+              <datalist id="auto-options">
+                <optgroup label="jcbil.com" class="view-JCBIL view-local">
+                  <option value="JCBIL">★</option>
+                  <option value="JCBIL">Home</option>
+                </optgroup>
+              </datalist>
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                  <i class="in-c glyphicon glyphicon-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+      <br>
+      <div class="alert alert-warning alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Warning!</strong> Do not use the "Online" link unless the browser url indicates that the site is hosted on <a href="http://sites.teamcodeflow.com/">sites.teamcodeflow.com</a>.
+      </div>
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading pointer" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+            <h4 class="panel-title">
+              J&amp;C Institute for Learning
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">
+              <h5 title="public_html">
+                JCBIL.COM
+                <a href="http://jcbil.com" title="Original"><span class="glyphicon glyphicon-new-window" style="font-weight:400 !important;font-size:0.8em !important;"></span></a>
+              </h5>
+              <ul class="list-group col-xs-12">
+                <li class="list-group-item indent-0 col-xs-12" title="www.jcbil.com">
+                  <span class="glyphicon glyphicon-globe"></span>home
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-1 col-xs-12" title="www.jcbil.com/author">
+                  <span class="glyphicon glyphicon-folder-open"></span>author
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/author">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-1 col-xs-12" title="www.jcbil.com/contact">
+                  <span class="glyphicon glyphicon-folder-open"></span>contact
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/contact">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-1 col-xs-12" title="www.jcbil.com/desire-to-aspire">
+                  <span class="glyphicon glyphicon-folder-open"></span>desire-to-aspire
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/desire-to-aspire">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-1 col-xs-12" title="www.jcbil.com/gallery">
+                  <span class="glyphicon glyphicon-folder-open"></span>gallery
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/gallery">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-1 col-xs-12" title="www.jcbil.com/home">
+                  <span class="glyphicon glyphicon-share-alt"></span>home
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/home">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-1 col-xs-12" title="www.jcbil.com/library">
+                  <span class="glyphicon glyphicon-folder-open"></span>library
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/library">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-2 col-xs-12" title="www.jcbil.com/library/archives">
+                  <span class="glyphicon glyphicon-folder-open"></span>archives
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/library/archives">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-2 col-xs-12" title="www.jcbil.com/library/seminars">
+                  <span class="glyphicon glyphicon-folder-open"></span>seminars
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/library/seminars">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-2 col-xs-12" title="www.jcbil.com/library/testimonials">
+                  <span class="glyphicon glyphicon-folder-open"></span>testimonials
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/library/testimonials">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-3 col-xs-12" title="www.jcbil.com/library/testimonials/1">
+                  <span class="glyphicon glyphicon-folder-open"></span>1
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/library/testimonials/1">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-3 col-xs-12" title="www.jcbil.com/library/testimonials/2">
+                  <span class="glyphicon glyphicon-folder-open"></span>2
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/library/testimonials/2">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-3 col-xs-12" title="www.jcbil.com/library/testimonials/3">
+                  <span class="glyphicon glyphicon-folder-open"></span>3
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/library/testimonials/3">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-3 col-xs-12" title="www.jcbil.com/library/testimonials/4">
+                  <span class="glyphicon glyphicon-folder-open"></span>4
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/library/testimonials/4">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-3 col-xs-12" title="www.jcbil.com/library/testimonials/5">
+                  <span class="glyphicon glyphicon-folder-open"></span>5
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/library/testimonials/5">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-3 col-xs-12" title="www.jcbil.com/library/testimonials/6">
+                  <span class="glyphicon glyphicon-folder-open/library/testimonials/6"></span>6
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-3 col-xs-12" title="www.jcbil.com/library/testimonials/7">
+                  <span class="glyphicon glyphicon-folder-open"></span>7
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/library/testimonials/7">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-3 col-xs-12" title="www.jcbil.com/library/testimonials/8">
+                  <span class="glyphicon glyphicon-folder-open"></span>8
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/library/testimonials/8">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-1 col-xs-12" title="www.jcbil.com/privacy-policy">
+                  <span class="glyphicon glyphicon-folder-open"></span>privacy-policy
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/privacy-policy/">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-1 col-xs-12" title="www.jcbil.com/resources">
+                  <span class="glyphicon glyphicon-folder-open"></span>resources
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/resources">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-1 col-xs-12" title="www.jcbil.com/services">
+                  <span class="glyphicon glyphicon-folder-open"></span>services
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/services">Online</a>
+                  </div>
+                </li>
+                <li class="list-group-item indent-1 col-xs-12" title="www.jcbil.com/staff">
+                  <span class="glyphicon glyphicon-folder-open"></span>staff
+                  <div class="pull-right">
+                    <a title="Developement (Online)" href="www.jcbil.com/staff">Online</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+  </body>
 </html>
